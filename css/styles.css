@@ -21,15 +21,19 @@ body{
     font-size: 1.25rem;
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
+    transition: text-shadow 0.5s ease;
 }
 .nav-link:hover{
-    color: rgb(119, 123, 118);
+    text-shadow: 2px 2px 8px black;
 }
 .name{
     display: flex;
     gap:15px;
     font-family: 'Audiowide',sans-serif;
     color: rgba(255, 255, 255, 1);
+    font-size: 4.5rem;
+    max-width: fit-content;
+    margin:auto;
 }
 .forname{
     display:flex;
@@ -40,12 +44,15 @@ body{
     gap:2px;
 }
 .name h2.letter{
-    transition: text-shadow 0.3s ease;
+    transition: text-shadow 0.1s ease;
 }
 .name h2.letter:hover{
-    text-shadow:2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow:4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .desc{
     font-family: 'Kodchasan',sans-serif;
     color:rgba(246, 246, 246, 1);
+    max-width: fit-content;
+    margin:auto;
+    font-size: 1.5rem;
 }
