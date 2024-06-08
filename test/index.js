@@ -9,7 +9,6 @@ $(document).ready(function() {
     });
 
     //var endPos = $tickerWrapper.width() - listWidth;
-    var endPos = $tickerWrapper.width() - listWidth;
 
     $list.add($clonedList).css({
         "width": listWidth + "px"
@@ -17,7 +16,6 @@ $(document).ready(function() {
 
     $clonedList.addClass("cloned").appendTo($tickerWrapper);
 
-    // TimelineMax
     var infinite = new TimelineMax({repeat: -1, paused: true});
     var time = 40;
 
