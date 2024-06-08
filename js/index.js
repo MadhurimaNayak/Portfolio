@@ -8,7 +8,7 @@ $(document).ready(function () {
         nameWidth += $(this).outerWidth(true);
     });
 
-    //var endPos = $lefttoright.width() - nameWidth;
+    var endPos = $lefttoright.width() - nameWidth;
 
     $name.add($clonedname).css({
         "width": nameWidth + "px"

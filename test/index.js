@@ -9,6 +9,7 @@ $(document).ready(function() {
     });
 
     //var endPos = $tickerWrapper.width() - listWidth;
+    var endPos = $tickerWrapper.width() - listWidth;
 
     $list.add($clonedList).css({
         "width": listWidth + "px"
