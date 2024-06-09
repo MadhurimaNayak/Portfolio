@@ -1,10 +1,10 @@
 $(document).ready(function () {
     var $lefttoright = $(".left-to-right");
-    var $name = $lefttoright.find("div.name");
+    var $name = $lefttoright.find("ul.name");
     var $clonedname = $name.clone();
     var nameWidth = 10;
 
-    $name.find("h2").each(function (i) {
+    $name.find("li").each(function (i) {
         nameWidth += $(this,i).outerWidth(true);
     });
 
@@ -27,10 +27,4 @@ $(document).ready(function () {
         .to($name, time, {force3D: true, rotation: 0.01, x: 0, ease: Linear.easeNone}, time)
         .progress(1).progress(0)
         .play();
-
-    $lefttoright.on("mouseenter", function () {
-        infinite.pause();
-    }).on("mouseleave", function () {
-        infinite.play();
-    });
 });

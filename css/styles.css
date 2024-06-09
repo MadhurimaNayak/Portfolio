@@ -34,46 +34,61 @@ body{
 .nav-link{
     font-family: 'Kodchasan',sans-serif;
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
-    transition: text-shadow 0.5s ease;
+    transition: text-shadow 0.2s ease;
 }
 .nav-link:hover{
-    text-shadow: 2px 2px 8px black;
+    text-shadow: 0px 10px 15px black;
+}
+
+/*styling for name and desc - position*/
+.moving{
+    margin-top: 20vh;
+    display:flex;
+    flex-direction: column;
+}
+
+.moving > * {
+    margin-bottom: -20px; /* Adjust the value as needed */
 }
 
 /*styling for name and its animation*/
 .left-to-right{
     position:relative;
     overflow:hidden;
+    left:0%;
+    width: 99.9%;
 }
-.name{
+ul.name{
     position:relative;
-    display: flex;
-    gap:15px;
+    display: inline-block;
+    list-style: none;
     font-family: 'Audiowide',sans-serif;
     color: rgba(255, 255, 255, 1);
-    font-size: 4.5rem;
-    max-width: fit-content;
-    margin:auto;
+    font-size: 7rem;
+    font-weight: 600;
+    padding:0;
+    margin:0;
 }
-.name.cloned{
-    position:absolute;
+ul.name.cloned {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
-.forname{
-    display:flex;
-    gap:2px;
+ul.name li {
+  margin-right: -15px;
+  float: left;
+  gap:0px;
+  padding-left: 20px;
+  transition: text-shadow 0.01s ease;
 }
-.surname{
-    display:flex;
-    gap:2px;
+ul.name li:hover{
+    text-shadow:10px 10px 20px rgba(0, 0, 0, 0.3);
 }
-.name h2.letter{
-    transition: text-shadow 0.1s ease;
-}
-.name h2.letter:hover{
-    text-shadow:4px 4px 10px rgba(0, 0, 0, 0.3);
+.letterspace{
+    margin-right: 40px;
 }
 
 /*styling for description and its animation*/
@@ -82,7 +97,7 @@ body{
     left:0%;
     width: 99.9%;
     overflow: hidden;
-    height:30px;
+
 }
 ul.desc{
     position:relative;
@@ -102,4 +117,10 @@ ul.desc.cloned {
 ul.desc li {
   float: left;
   padding-left: 20px;
+}
+.self{
+    position:absolute;
+    top:10vh;
+    left:65vh;
+    width:100px;
 }
