@@ -1,17 +1,29 @@
+/*importing google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/*styling for navbar*/
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box; /* For compatibility with older WebKit browsers */
+  box-sizing: border-box; /* Standard property */
 }
 
 body{
     margin:0;
 }
+
+/*styling for section*/
 .main{
     height:100vh;
     background-image: url('../images/background1.png');
     background-size: cover;
 }
+
+/*styling for navigation*/
 .head{
     padding:30px 120px;
 }
@@ -30,6 +42,8 @@ body{
 .nav-link:hover{
     text-shadow: 2px 2px 8px black;
 }
+
+/*styling for name and its animation*/
 .left-to-right{
     position:relative;
     overflow:hidden;
@@ -61,10 +75,31 @@ body{
 .name h2.letter:hover{
     text-shadow:4px 4px 10px rgba(0, 0, 0, 0.3);
 }
-.desc{
+
+/*styling for description and its animation*/
+.right-to-left{
+    position:relative;
+    left:0%;
+    width: 99.9%;
+    overflow: hidden;
+    height:30px;
+}
+ul.desc{
+    position:relative;
+    display: inline-block;
+    list-style: none;
     font-family: 'Kodchasan',sans-serif;
     color:rgba(246, 246, 246, 1);
-    max-width: fit-content;
-    margin:auto;
     font-size: 1.5rem;
+    padding:0;
+    margin:0;
+}
+ul.desc.cloned {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+ul.desc li {
+  float: left;
+  padding-left: 20px;
 }
