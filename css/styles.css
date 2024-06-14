@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
+html { 
+    scroll-behavior: smooth; 
+    }
 /*styling for navbar*/
 ::-webkit-scrollbar {
   width: 0px;
@@ -14,33 +17,46 @@
 
 body{
     margin:0;
+    min-height: 200vh;
+    background-color: rgb(83, 131, 146);
 }
 
-/*styling for section*/
+/*styling for section main*/
 .main{
-    height:100vh;
+    position:relative;
+    width:100%;
+    height:95.5vh;
     background-image: url('../images/background1.png');
     background-size: cover;
+    background-position: center;
 }
 
 /*styling for navigation*/
 .head{
     padding:30px 120px;
+    position: sticky;
+    top:0;
+    z-index: 1000000;
+    transition:0.6s;
 }
 .navigation{
+    top:0;
     display:flex;
     justify-content: space-between;
 }
 .nav-link{
+    position:relative;
     font-family: 'Kodchasan',sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
-    transition: text-shadow 0.2s ease;
+    /*text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.826);*/
+    transition: text-shadow 0.2s ease, top 0.2s ease;
 }
 .nav-link:hover{
-    text-shadow: 0px 10px 15px black;
+    text-shadow: 0px 3px 2px rgb(22, 69, 67);
+    top:-2px;
 }
 
 /*styling for name and desc - position*/
@@ -82,11 +98,12 @@ ul.name li {
   float: left;
   gap:0px;
   padding-left: 20px;
-  transition: text-shadow 0.01s ease;
+  text-shadow:15px 15px 20px rgba(0, 0, 0, 0.3);
+  /*transition: text-shadow 0.01s ease;*/
 }
-ul.name li:hover{
-    text-shadow:10px 10px 20px rgba(0, 0, 0, 0.3);
-}
+/*ul.name li:hover{
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(22, 69, 67);
+}*/
 .letterspace{
     margin-right: 40px;
 }
@@ -97,7 +114,6 @@ ul.name li:hover{
     left:0%;
     width: 99.9%;
     overflow: hidden;
-
 }
 ul.desc{
     position:relative;
@@ -123,4 +139,21 @@ ul.desc li {
     top:10vh;
     left:65vh;
     width:100px;
+    max-width: 100%;
+}
+/*styling for section main*/
+.skills{
+    position:relative;
+    width:100%;
+    height:150vh;
+    background-image: url('../images/background2.png');
+    background-size: cover;
+    background-position: center;
+}
+/*styling for section projects*/
+.projects{
+    position:relative;
+    width:100%;
+    height:150vh;
+    background-color: rgb(128, 185, 173);
 }
