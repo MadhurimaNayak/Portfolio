@@ -2,158 +2,217 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
-html { 
-    scroll-behavior: smooth; 
-    }
-/*styling for navbar*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*styling for scrollbar*/
 ::-webkit-scrollbar {
-  width: 0px;
+    width: 0px;
 }
 
-*, *::before, *::after {
-  -webkit-box-sizing: border-box; /* For compatibility with older WebKit browsers */
-  box-sizing: border-box; /* Standard property */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    /* For compatibility with older WebKit browsers */
+    box-sizing: border-box;
+    /* Standard property */
 }
 
-body{
-    margin:0;
-    min-height: 200vh;
+body {
+    margin: 0;
+    height: 100%;
     background-color: rgb(83, 131, 146);
+    position: relative;
 }
 
-/*styling for section main*/
-.main{
-    position:relative;
-    width:100%;
-    height:95.5vh;
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     background-image: url('../images/background1.png');
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
+    z-index: -1;
 }
 
 /*styling for navigation*/
-.head{
-    padding:30px 120px;
+.head {
+    padding: 30px 120px;
+    background-color: rgba(5, 27, 33, 0.071);
+    position: -webkit-sticky;
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 1000000;
-    transition:0.6s;
+    transition: background-color 0.3s ease;
 }
-.navigation{
-    top:0;
-    display:flex;
+
+.navigation {
+    top: 0;
+    display: flex;
     justify-content: space-between;
 }
-.nav-link{
-    position:relative;
-    font-family: 'Kodchasan',sans-serif;
+
+.nav-link {
+    position: relative;
+    font-family: 'Kodchasan', sans-serif;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
     /*text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.826);*/
     transition: text-shadow 0.2s ease, top 0.2s ease;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     text-shadow: 0px 3px 2px rgb(22, 69, 67);
-    top:-2px;
+    top: -2px;
+}
+
+/*styling for section main*/
+.main {
+    position: relative;
+    width: 100%;
+    height: 66vh;
 }
 
 /*styling for name and desc - position*/
-.moving{
+.moving {
     margin-top: 20vh;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
-.moving > * {
-    margin-bottom: -20px; /* Adjust the value as needed */
+.moving>* {
+    margin-bottom: -20px;
+    /* Adjust the value as needed */
 }
 
 /*styling for name and its animation*/
-.left-to-right{
-    position:relative;
-    overflow:hidden;
-    left:0%;
+.left-to-right {
+    position: relative;
+    overflow: hidden;
+    left: 0%;
     width: 99.9%;
 }
-ul.name{
-    position:relative;
+
+ul.name {
+    position: relative;
     display: inline-block;
     list-style: none;
-    font-family: 'Audiowide',sans-serif;
+    font-family: 'Audiowide', sans-serif;
     color: rgba(255, 255, 255, 1);
     font-size: 7rem;
     font-weight: 600;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
+
 ul.name.cloned {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
+
 ul.name li {
-  margin-right: -15px;
-  float: left;
-  gap:0px;
-  padding-left: 20px;
-  text-shadow:15px 15px 20px rgba(0, 0, 0, 0.3);
-  /*transition: text-shadow 0.01s ease;*/
+    margin-right: -15px;
+    float: left;
+    gap: 0px;
+    padding-left: 20px;
+    text-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+    /*transition: text-shadow 0.01s ease;*/
 }
+
 /*ul.name li:hover{
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(22, 69, 67);
 }*/
-.letterspace{
+.letterspace {
     margin-right: 40px;
 }
 
 /*styling for description and its animation*/
-.right-to-left{
-    position:relative;
-    left:0%;
+.right-to-left {
+    position: relative;
+    left: 0%;
     width: 99.9%;
     overflow: hidden;
 }
-ul.desc{
-    position:relative;
+
+ul.desc {
+    position: relative;
     display: inline-block;
     list-style: none;
-    font-family: 'Kodchasan',sans-serif;
-    color:rgba(246, 246, 246, 1);
+    font-family: 'Kodchasan', sans-serif;
+    color: rgba(246, 246, 246, 1);
     font-size: 1.5rem;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
+
 ul.desc.cloned {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
+
 ul.desc li {
-  float: left;
-  padding-left: 20px;
+    float: left;
+    padding-left: 20px;
 }
-.self{
-    position:absolute;
-    top:10vh;
-    left:65vh;
-    width:100px;
+
+.self {
+    position: absolute;
+    z-index: 100;
+    top: -19.9vh;
+    left: 65vh;
+    width: 100px;
+    height:80px;
     max-width: 100%;
+    bottom: 0;
 }
-/*styling for section main*/
-.skills{
-    position:relative;
-    width:100%;
-    height:150vh;
+
+/*styling for section skills*/
+.skills {
+    position: relative;
+    width: 100%;
+    height: 150vh;
     background-image: url('../images/background2.png');
     background-size: cover;
     background-position: center;
 }
+
 /*styling for section projects*/
-.projects{
-    position:relative;
-    width:100%;
-    height:150vh;
-    background-color: rgb(128, 185, 173);
+.proj-container {
+    max-width: 100%;
+    margin-top: 5%;
+    margin-left: 20px;
+    overflow: hidden;
+
+}
+
+.proj-innercontainer {
+    display: flex;
+    gap: 10px;
+}
+
+.proj-item {
+    height: 400px;
+    width: 300px;
+    background-image: linear-gradient(45deg, rgba(179, 226, 167, 1), rgba(128, 185, 173, 1));
+    border-radius: 10px;
+}
+
+/*styling for section experience*/
+.experience {
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    background-image: url('../images/background2.png');
+    background-size: cover;
+    background-position: center;
 }

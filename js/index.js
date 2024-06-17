@@ -28,3 +28,4 @@ $(document).ready(function () {
         .progress(1).progress(0)
         .play();
 });
+
