@@ -4,7 +4,6 @@
 html {
     scroll-behavior: smooth;
 }
-
 /*styling for scrollbar*/
 ::-webkit-scrollbar {
     width: 0px;
@@ -41,6 +40,7 @@ body::before {
 }
 
 /*styling for navigation*/
+
 .head {
     padding: 30px 120px;
     background-color: rgba(5, 27, 33, 0.071);
@@ -49,6 +49,11 @@ body::before {
     top: 0;
     z-index: 1000000;
     transition: background-color 0.3s ease;
+}
+
+.head.scrolled {
+  background-color: rgba(5, 27, 33, 0.703) !important;
+  transition: background-color 200ms linear;
 }
 
 .navigation {
@@ -69,11 +74,16 @@ body::before {
 }
 
 .nav-link:hover {
-    text-shadow: 0px 3px 2px rgb(22, 69, 67);
+    /*text-shadow: 0px 3px 2px rgb(22, 69, 67);*/
     top: -2px;
 }
 
+.nav-link:active {
+    color: rgb(181, 181, 181);
+}
+
 /*styling for section main*/
+
 .main {
     position: relative;
     width: 100%;
@@ -81,6 +91,7 @@ body::before {
 }
 
 /*styling for name and desc - position*/
+
 .moving {
     margin-top: 20vh;
     display: flex;
@@ -93,6 +104,7 @@ body::before {
 }
 
 /*styling for name and its animation*/
+
 .left-to-right {
     position: relative;
     overflow: hidden;
@@ -135,6 +147,7 @@ ul.name li {
 }
 
 /*styling for description and its animation*/
+
 .right-to-left {
     position: relative;
     left: 0%;
@@ -174,19 +187,59 @@ ul.desc li {
     max-width: 100%;
     bottom: 0;
 }
+
 /*styling for section about*/
+
+.about{
+    position: relative;
+}
+
 .about-head{
     height: 86px;
     font-family:'Audiowide', sans-serif;
     font-size: 4rem;
-    padding:20px 30px;
+    padding:60px 80px;
+    color:rgba(0, 0, 0, 0.658);
 }
 .about-text{
-    padding:20px 30px;
+    padding:70px 90px;
+    font-size: 1.3rem;
     font-family:'Kodchasan', sans-serif;
     font-weight:500;
 }
+.about-buttons{
+    max-width:fit-content;
+    margin:auto;
+    padding-bottom: 80px;
+    display:flex;
+    gap:40px;
+}
+.about-button{
+    cursor:pointer;
+    font-family:'Kodchasan', sans-serif;
+    background-color:transparent;
+    box-shadow: inset 0px 0px 20px  rgba(179, 226, 167, 1);
+    padding:20px 40px;
+    border:none;
+    border-radius: 40px;
+    font-size: 1rem;
+}
+.about-button a{
+    text-decoration: none;
+    color:whitesmoke;
+    font-weight: 400;
+}
+.about-button:hover{
+    background-color: rgb(204, 214, 191);
+    box-shadow: 0px 0px 7px white;
+}
+.about-button a:hover{
+    color: rgb(21, 21, 21);
+}
+
+
 /*styling for section skills*/
+
 .skills {
     position: relative;
     width: 100%;
@@ -197,7 +250,13 @@ ul.desc li {
 }
 
 /*styling for section projects*/
+
+.projects{
+    position: relative;
+}
+
 .proj-container {
+    position: relative;
     max-width: 100%;
     margin-top: 5%;
     margin-left: 20px;
@@ -218,6 +277,7 @@ ul.desc li {
 }
 
 /*styling for section experience*/
+
 .experience {
     position: relative;
     width: 100%;
