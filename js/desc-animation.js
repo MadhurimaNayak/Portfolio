@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).ready(function () {
     var $righttoleft = $(".right-to-left");
     var $desc = $righttoleft.find("ul.desc");
     var $cloneddesc = $desc.clone();
@@ -33,6 +33,8 @@ $(document).ready(function () {
     }).on("mouseleave", function () {
         infinite.play();
     });
+
+    $righttoleft.css('visibility', 'visible');
 });
 
 

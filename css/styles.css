@@ -188,6 +188,12 @@ ul.desc li {
     bottom: 0;
 }
 
+.left-to-right, .right-to-left {
+    white-space: nowrap;
+    display: inline-block;
+    visibility: hidden; /* Initially hide elements */
+}
+
 /*styling for section about*/
 
 .about{
@@ -201,12 +207,14 @@ ul.desc li {
     padding:60px 80px;
     color:rgba(0, 0, 0, 0.658);
 }
+
 .about-text{
     padding:70px 90px;
     font-size: 1.3rem;
     font-family:'Kodchasan', sans-serif;
     font-weight:500;
 }
+
 .about-buttons{
     max-width:fit-content;
     margin:auto;
@@ -214,6 +222,7 @@ ul.desc li {
     display:flex;
     gap:40px;
 }
+
 .about-button{
     cursor:pointer;
     font-family:'Kodchasan', sans-serif;
@@ -224,19 +233,21 @@ ul.desc li {
     border-radius: 40px;
     font-size: 1rem;
 }
+
 .about-button a{
     text-decoration: none;
     color:whitesmoke;
     font-weight: 400;
 }
+
 .about-button:hover{
     background-color: rgb(204, 214, 191);
     box-shadow: 0px 0px 7px white;
 }
+
 .about-button a:hover{
     color: rgb(21, 21, 21);
 }
-
 
 /*styling for section skills*/
 

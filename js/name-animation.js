@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).ready(function () {
     var $lefttoright = $(".left-to-right");
     var $name = $lefttoright.find("ul.name");
     var $clonedname = $name.clone();
@@ -27,5 +27,7 @@ $(document).ready(function () {
         .to($name, time, {force3D: true, rotation: 0.01, x: 0, ease: Linear.easeNone}, time)
         .progress(1).progress(0)
         .play();
+
+    $lefttoright.css('visibility', 'visible');
 });
 
