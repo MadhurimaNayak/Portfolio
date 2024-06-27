@@ -112,7 +112,7 @@ body::before {
     width: 99.9%;
 }
 
-ul.name {
+div.left-to-right ul.name {
     position: relative;
     display: inline-block;
     list-style: none;
@@ -124,13 +124,13 @@ ul.name {
     margin: 0;
 }
 
-ul.name.cloned {
+div.left-to-right ul.name.cloned {
     position: absolute;
     top: 0px;
     left: 0px;
 }
 
-ul.name li {
+div.left-to-right ul.name li {
     margin-right: -15px;
     float: left;
     gap: 0px;
@@ -155,7 +155,7 @@ ul.name li {
     overflow: hidden;
 }
 
-ul.desc {
+div.right-to-left ul.desc {
     position: relative;
     display: inline-block;
     list-style: none;
@@ -166,13 +166,13 @@ ul.desc {
     margin: 0;
 }
 
-ul.desc.cloned {
+div.right-to-left ul.desc.cloned {
     position: absolute;
     top: 0px;
     left: 0px;
 }
 
-ul.desc li {
+div.right-to-left ul.desc li {
     float: left;
     padding-left: 20px;
 }
@@ -210,7 +210,7 @@ ul.desc li {
 
 .about-text{
     padding:70px 90px;
-    font-size: 1.3rem;
+    font-size: 1.33rem;
     font-family:'Kodchasan', sans-serif;
     font-weight:500;
 }
@@ -231,7 +231,7 @@ ul.desc li {
     padding:20px 40px;
     border:none;
     border-radius: 40px;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .about-button a{
@@ -249,51 +249,30 @@ ul.desc li {
     color: rgb(21, 21, 21);
 }
 
-/*styling for section skills*/
+/*styling for section projects*/
 
-.skills {
+.projects {
     position: relative;
     width: 100%;
     height: 150vh;
     background-image: url('../images/background2.png');
     background-size: cover;
     background-position: center;
-}
-
-/*styling for section projects*/
-
-.projects{
-    position: relative;
-}
-
-.proj-container {
-    position: relative;
-    max-width: 100%;
-    margin-top: 5%;
-    margin-left: 20px;
-    overflow: hidden;
-
-}
-
-.proj-innercontainer {
-    display: flex;
-    gap: 10px;
-}
-
-.proj-item {
-    height: 400px;
-    width: 300px;
-    background-image: linear-gradient(45deg, rgba(179, 226, 167, 1), rgba(128, 185, 173, 1));
-    border-radius: 10px;
 }
 
 /*styling for section experience*/
 
-.experience {
+.experience{
     position: relative;
-    width: 100%;
-    height: 150vh;
-    background-image: url('../images/background2.png');
-    background-size: cover;
-    background-position: center;
+    height:150vh;
+}
+
+/*styling for footer*/
+.foot{
+    padding:15px;
+    text-align: center;
+    font-family: 'Kodchasan', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: rgba(128, 185, 173, 1);
 }
